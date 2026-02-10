@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      cyber_incidents: {
+        Row: {
+          affected_systems: number
+          attack_source: string
+          country: string
+          created_at: string
+          detection_time_minutes: number
+          id: string
+          incident_id: string
+          severity: string
+          status: string
+          target_system: string
+          threat_type: string
+          timestamp: string
+        }
+        Insert: {
+          affected_systems?: number
+          attack_source: string
+          country: string
+          created_at?: string
+          detection_time_minutes?: number
+          id?: string
+          incident_id: string
+          severity: string
+          status: string
+          target_system: string
+          threat_type: string
+          timestamp: string
+        }
+        Update: {
+          affected_systems?: number
+          attack_source?: string
+          country?: string
+          created_at?: string
+          detection_time_minutes?: number
+          id?: string
+          incident_id?: string
+          severity?: string
+          status?: string
+          target_system?: string
+          threat_type?: string
+          timestamp?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
